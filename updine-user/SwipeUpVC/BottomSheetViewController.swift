@@ -7,17 +7,14 @@
 //
 
 import UIKit
+import EventKit
 
 class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var navBarView: UIView!
-    @IBOutlet weak var collectionViewOne: UICollectionView!
+    @IBOutlet weak var video: UIWebView!
     
-    @IBOutlet weak var screenImageView: UIImageView!
-    
-        var dataSource1: [String] = ["yas", "tas", "yas", "tas", "yas", "tas", "yas", "tas"]
-        var foodSpots: [FoodSpot] = [FoodSpot.f1, FoodSpot.f2, FoodSpot.f3]
-    
+
     
         let closeThresholdHeight: CGFloat = 100
         let openThreshold: CGFloat = UIScreen.main.bounds.height - 200
@@ -30,16 +27,23 @@ class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
         override func viewDidLoad() {
             gotPanned(0)
             super.viewDidLoad()
-            collectionViewOne.dataSource = self
-//            screenImageView.image = UIImage(named: ("swipeUpHalf"))
             
 
             let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(respondToPanGesture))
             view.addGestureRecognizer(gestureRecognizer)
             gestureRecognizer.delegate = self
             panGestureRecognizer = gestureRecognizer
+            
+            getVideo(videoCode: "7Ueq-Tj9TJs")
         }
 
+    
+        //play video
+        func getVideo(videoCode: String){
+            let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+            video.loadRequest(URLRequest(url: url!))
+        }
+    
         func gotPanned(_ percentage: Int) {
             if animator == nil {
                 animator = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: {
@@ -107,43 +111,38 @@ class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
             let name = NSNotification.Name(rawValue: "BottomViewMoved")
             NotificationCenter.default.post(name: name, object: nil, userInfo: ["percentage": percentage])
         }
+    
+    @IBAction func meetingClicked(_ sender: Any) {
+        let eventStore:EKEventStore = EKEventStore()
+        
+        eventStore.requestAccess(to: .event) {(granted, error) in
+            if (granted) && (error) == nil
+            {
+                print("granted \(granted)")
+                print("error \(error)")
+                
+                let event:EKEvent = EKEvent(eventStore: eventStore)
+                event.title = "Investment Meeting EyeRide CEO"
+                event.startDate = Date()
+                event.endDate = Date()
+                event.notes = ""
+                event.calendar = eventStore.defaultCalendarForNewEvents
+                do {
+                    try eventStore.save(event, span: .thisEvent)
+                } catch let error as NSError{
+                    print("error : \(error)")
+                }
+                print("Save Event")
+            } else{
+                print("error : \(error)")
+            }
+            
+        }
+    }
+    
+    
+    
 }
+
+    
 
-extension BottomSheetViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1;
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return foodSpots.count
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let foodSpotChosen = foodSpots[indexPath.row]
-        
-        let cell = collectionViewOne.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as! OneCollectionViewCell
-        
-        cell.setFoodSpot(diner: foodSpotChosen)
-        
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as! OneCollectionViewCell
-//        cell.setLabel(dataSource1[indexPath.row])
-        return cell
-        
-    }
-    
-    //for aesthetics
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("whose mans")
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-//        UIView.animate(withDuration: 0.5) {
-//            if let cell = collectionView.cellForItem(at: indexPath) as? OneCollectionViewCell {
-//                cell.imageView.transform = .init(scaleX: 0.95, y: 0.95)
-//                cell.contentView.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
-//            }
-//        }
-//    }
-    
-    
-}
