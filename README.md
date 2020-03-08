@@ -1,10 +1,10 @@
 # SeedIt
 
-**About:** Foster environment sustainability by helping users recycle their Clinique products for points used to redeem other products. This ultimiately helps Estee Lauder to collect data of the types of products users recyle and buy, to give better suggestions and reccommendations, in order to increase sales and incoming revenue. 
+**About:** A platform for startups and new brands to market and share their business for investors to view and help grow. Allows for investors to view startups based on location and industry in a seamless way. Also allows for transactions to take place directly in the app in real time between both parties. 
 
-**Built With:** Swift, Xcode, Zeplin, Google Cloud, Firebase, Microsoft Machine Learning Studio, Apple Core ML Image, Tensor Flow 
+**Built With:** Swift, Xcode, Zeplin, Google Cloud, Firebase, Speech Recognition, Stripe API 
 
-**Frameworks:** UIKit, MapKit, CoreLocation, FlyoverKit, UserNotifications, EventKit, Contacts, Firebase, Parse, Authentication
+**Frameworks:** UIKit, MapKit, CoreLocation, FlyoverKit, UserNotifications, EventKit, Contacts, Firebase, Parse, Authentication, SpeechKit, iCarousel
 
 
 
