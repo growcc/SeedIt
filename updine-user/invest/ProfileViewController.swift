@@ -35,10 +35,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var iCarouselView: iCarousel!
     
     var companies = [
-        UIImage(named: "wincCard"),
+        UIImage(named: "latchCard"),
         UIImage(named: "smileloveCard"),
         UIImage(named: "tripActionsCard"),
-        UIImage(named: "latchCard")
+        UIImage(named: "wincCard")
     ]
     
 
@@ -54,7 +54,7 @@ extension ProfileViewController: iCarouselDelegate, iCarouselDataSource {
         var imageView: UIImageView!
         
         if view == nil{
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 327, height: 297))
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 315, height: 285))
             imageView.contentMode = .scaleAspectFit
         } else {
             imageView = view as? UIImageView

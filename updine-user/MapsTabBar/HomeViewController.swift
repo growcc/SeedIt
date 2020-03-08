@@ -80,12 +80,12 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
     func addAnnotations(){
         let pinOne = MKPointAnnotation()
         pinOne.title = markerTitle
-        pinOne.coordinate = CLLocationCoordinate2D(latitude: 37.7989, longitude: 122.4662)
+        pinOne.coordinate = CLLocationCoordinate2D(latitude: 37.7989, longitude: -122.4662)
         
         
         let pinTwo = MKPointAnnotation()
         pinTwo.title = markerTitle
-        pinTwo.coordinate = CLLocationCoordinate2D(latitude: 51.5734, longitude: 0.0724)
+        pinTwo.coordinate = CLLocationCoordinate2D(latitude: 51.5033, longitude: -0.1195)
         
         let timesSqaureAnnotation = MKPointAnnotation()
                timesSqaureAnnotation.title = markerTitle
