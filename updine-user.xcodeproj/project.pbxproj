@@ -11,6 +11,7 @@
 		1B38C0942414803500D95B8B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C0932414803500D95B8B /* FeedViewController.swift */; };
 		1B38C09624151CD000D95B8B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C09524151CD000D95B8B /* InfoViewController.swift */; };
 		1B38C0982415231600D95B8B /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C0972415231600D95B8B /* PayViewController.swift */; };
+		1B38C09D24152D6600D95B8B /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C09C24152D6600D95B8B /* iCarousel.m */; };
 		7C1A418B23CB3817008B2865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1A418A23CB3817008B2865 /* AppDelegate.swift */; };
 		7C1A418D23CB3817008B2865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1A418C23CB3817008B2865 /* SceneDelegate.swift */; };
 		7C1A419223CB3817008B2865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1A419023CB3817008B2865 /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 		1B38C0932414803500D95B8B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1B38C09524151CD000D95B8B /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		1B38C0972415231600D95B8B /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		1B38C09A24152D6500D95B8B /* updine-user-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "updine-user-Bridging-Header.h"; sourceTree = "<group>"; };
+		1B38C09B24152D6600D95B8B /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		1B38C09C24152D6600D95B8B /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		6148F991BB3F5C1D8BF285B9 /* Pods_updine_user.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_updine_user.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1A418723CB3817008B2865 /* updine-user.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "updine-user.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1A418A23CB3817008B2865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,16 @@
 			path = invest;
 			sourceTree = "<group>";
 		};
+		1B38C09924152D1600D95B8B /* CarouselFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1B38C09B24152D6600D95B8B /* iCarousel.h */,
+				1B38C09C24152D6600D95B8B /* iCarousel.m */,
+				1B38C09A24152D6500D95B8B /* updine-user-Bridging-Header.h */,
+			);
+			path = CarouselFiles;
+			sourceTree = "<group>";
+		};
 		7C1A417E23CB3817008B2865 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +114,7 @@
 		7C1A418923CB3817008B2865 /* updine-user */ = {
 			isa = PBXGroup;
 			children = (
+				1B38C09924152D1600D95B8B /* CarouselFiles */,
 				1B38C090241477DE00D95B8B /* invest */,
 				7C9D30D423DDA84C00AD2018 /* OtherTabs */,
 				7C7220F823CEEB38000DDF1E /* DinersFlow */,
@@ -212,6 +227,7 @@
 				TargetAttributes = {
 					7C1A418623CB3817008B2865 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -300,6 +316,7 @@
 				1B38C09624151CD000D95B8B /* InfoViewController.swift in Sources */,
 				7C1A419F23CD7BBE008B2865 /* MapViewController.swift in Sources */,
 				7C1A418D23CB3817008B2865 /* SceneDelegate.swift in Sources */,
+				1B38C09D24152D6600D95B8B /* iCarousel.m in Sources */,
 				1B38C0942414803500D95B8B /* FeedViewController.swift in Sources */,
 				7C7220F423CEDD2A000DDF1E /* Diner.swift in Sources */,
 				7C7220F623CEE91D000DDF1E /* DinerTableViewCell.swift in Sources */,
@@ -453,6 +470,7 @@
 			baseConfigurationReference = 8F8247B17294AA4B2DDD1297 /* Pods-updine-user.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4L2JW8YQE4;
 				INFOPLIST_FILE = "updine-user/Info.plist";
@@ -463,6 +481,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yasinehsan.updine-user";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "updine-user/CarouselFiles/updine-user-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,6 +493,7 @@
 			baseConfigurationReference = 02021A693BBDFB1A801228AB /* Pods-updine-user.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4L2JW8YQE4;
 				INFOPLIST_FILE = "updine-user/Info.plist";
@@ -483,6 +504,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yasinehsan.updine-user";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "updine-user/CarouselFiles/updine-user-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
