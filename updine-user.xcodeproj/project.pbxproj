@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B38C0922414781600D95B8B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C0912414781600D95B8B /* ProfileViewController.swift */; };
+		1B38C0942414803500D95B8B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C0932414803500D95B8B /* FeedViewController.swift */; };
 		7C1A418B23CB3817008B2865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1A418A23CB3817008B2865 /* AppDelegate.swift */; };
 		7C1A418D23CB3817008B2865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1A418C23CB3817008B2865 /* SceneDelegate.swift */; };
 		7C1A419223CB3817008B2865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1A419023CB3817008B2865 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		02021A693BBDFB1A801228AB /* Pods-updine-user.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-updine-user.release.xcconfig"; path = "Target Support Files/Pods-updine-user/Pods-updine-user.release.xcconfig"; sourceTree = "<group>"; };
 		1B38C0912414781600D95B8B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1B38C0932414803500D95B8B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		6148F991BB3F5C1D8BF285B9 /* Pods_updine_user.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_updine_user.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1A418723CB3817008B2865 /* updine-user.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "updine-user.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1A418A23CB3817008B2865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				1B38C0912414781600D95B8B /* ProfileViewController.swift */,
+				1B38C0932414803500D95B8B /* FeedViewController.swift */,
 			);
 			path = invest;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				7CE08F8823DDE10000782338 /* FoodSpot.swift in Sources */,
 				7C1A419F23CD7BBE008B2865 /* MapViewController.swift in Sources */,
 				7C1A418D23CB3817008B2865 /* SceneDelegate.swift in Sources */,
+				1B38C0942414803500D95B8B /* FeedViewController.swift in Sources */,
 				7C7220F423CEDD2A000DDF1E /* Diner.swift in Sources */,
 				7C7220F623CEE91D000DDF1E /* DinerTableViewCell.swift in Sources */,
 				7CD155E423DCB076002775A9 /* HomeViewController.swift in Sources */,
