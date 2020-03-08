@@ -209,6 +209,7 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
             checkLocationServices()
             mapView.delegate = self
             flyKitSetup()
+            createBottomView()
 
            let name = NSNotification.Name(rawValue: "BottomViewMoved")
            NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: receiveNotification(_:))
@@ -415,7 +416,7 @@ extension HomeViewController: MKMapViewDelegate {
     //segue to details vc
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         showRoute() //for destination gps
-        createBottomView()
+//        createBottomView()
 //         let annView = view.annotation
 //
 //       let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
