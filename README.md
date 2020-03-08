@@ -45,6 +45,5 @@
 ## Team
 - Backend: **Yasin Ehsan**, Queens College
 - Native & Frontend: **Helal Chowdhury**, NYU
-- Backend: **Matthew Rodriguez**, Baruch
 - UI/UX Designier: **Meng Shi***, Baruch
-- Backend: **Ming Lei***, Queens College
+- Backend: **Jagnaughdh***, Queens College
