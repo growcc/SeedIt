@@ -48,4 +48,4 @@
 - Backend: **Yasin Ehsan**, Queens College
 - Native & Frontend: **Helal Chowdhury**, NYU
 - UI/UX Designier: **Meng Shi***, Baruch
-- Backend: **Jagnaughdh***, Queens College
+- Backend: **Jagnaudh***, Baruch College
