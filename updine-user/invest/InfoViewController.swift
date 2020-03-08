@@ -16,7 +16,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode: "7Ueq-Tj9TJs")
+        getVideo(videoCode: "vsJO1Ko4gb4")
 
  
     }

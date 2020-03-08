@@ -22,9 +22,9 @@ class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
     
 
     
-        let closeThresholdHeight: CGFloat = 100
+        let closeThresholdHeight: CGFloat = 200
         let openThreshold: CGFloat = UIScreen.main.bounds.height - 200
-        let closeThreshold = UIScreen.main.bounds.height - 100 // same value as closeThresholdHeight
+        let closeThreshold = UIScreen.main.bounds.height - 200 // same value as closeThresholdHeight
         var panGestureRecognizer: UIPanGestureRecognizer?
         var animator: UIViewPropertyAnimator?
 
@@ -40,7 +40,7 @@ class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
             gestureRecognizer.delegate = self
             panGestureRecognizer = gestureRecognizer
             
-            getVideo(videoCode: "7Ueq-Tj9TJs")
+            getVideo(videoCode: "vsJO1Ko4gb4")
         }
 
     
