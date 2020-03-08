@@ -15,9 +15,9 @@ class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
 
     
     
-        let closeThresholdHeight: CGFloat = 1
+        let closeThresholdHeight: CGFloat = 30
         let openThreshold: CGFloat = UIScreen.main.bounds.height - 200
-        let closeThreshold = UIScreen.main.bounds.height - 1 // same value as closeThresholdHeight
+        let closeThreshold = UIScreen.main.bounds.height - 30 // same value as closeThresholdHeight
         var panGestureRecognizer: UIPanGestureRecognizer?
         var animator: UIViewPropertyAnimator?
 

@@ -29,7 +29,7 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
     var recognitionTask: SFSpeechRecognitionTask?
     let audioEngine = AVAudioEngine()
     
-    let markerTitle: String = "Get Directions"
+    let markerTitle: String = "Winc - Get Directions"
     
     
      func centerViewOnUserLocation() {
