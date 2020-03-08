@@ -20,7 +20,6 @@
                             </mapView>
                             <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-6U-joA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXh-bG-X0M">
                                 <rect key="frame" x="50" y="54" width="128" height="34"/>
@@ -154,17 +153,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9r-M9-rY2">
-                                <rect key="frame" x="281" y="23" width="78" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="Join Call"/>
-                                <connections>
-                                    <action selector="joinCallPressed:" destination="yFR-aX-t3D" eventType="touchUpInside" id="XI2-ga-Jgl"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OjE-ic-P7w" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="462" width="375" height="246"/>
+                                <rect key="frame" x="0.0" y="503" width="375" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
@@ -172,6 +162,18 @@
                                     <outlet property="delegate" destination="yFR-aX-t3D" id="Pdv-z5-OCx"/>
                                 </connections>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profileScreen" translatesAutoresizingMaskIntoConstraints="NO" id="ZXc-nU-r9M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9r-M9-rY2">
+                                <rect key="frame" x="28" y="138" width="324" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <connections>
+                                    <action selector="joinCallPressed:" destination="yFR-aX-t3D" eventType="touchUpInside" id="XI2-ga-Jgl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="816-Ze-nRg"/>
@@ -201,7 +203,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CompanyVideo" translatesAutoresizingMaskIntoConstraints="NO" id="jO6-wI-5nP">
-                                        <rect key="frame" x="0.0" y="-79" width="375" height="822"/>
+                                        <rect key="frame" x="0.0" y="-79" width="375" height="895"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XjV-Zl-eBq" customClass="iCarousel">
@@ -216,8 +218,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lc-1Q-sFB">
-                                <rect key="frame" x="123" y="687" width="128" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lc-1Q-sFB">
+                                <rect key="frame" x="123" y="708" width="129" height="40"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
                                 <state key="normal" title="Learn More">
                                     <color key="titleColor" red="0.20798527759999999" green="0.23915282600000001" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -231,8 +233,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EOj-7q-qwz" firstAttribute="top" secondItem="EMr-UP-Aky" secondAttribute="top" id="1zO-Ed-Huk"/>
+                            <constraint firstItem="2hj-g9-JUK" firstAttribute="bottom" secondItem="4Lc-1Q-sFB" secondAttribute="bottom" constant="30" id="4Nj-IZ-42q"/>
                             <constraint firstAttribute="bottom" secondItem="EOj-7q-qwz" secondAttribute="bottom" constant="545" id="7N0-dR-s0r"/>
-                            <constraint firstItem="2hj-g9-JUK" firstAttribute="bottom" secondItem="4Lc-1Q-sFB" secondAttribute="bottom" constant="51" id="9eY-zo-7Jp"/>
                             <constraint firstItem="EOj-7q-qwz" firstAttribute="trailing" secondItem="2hj-g9-JUK" secondAttribute="trailing" id="IQF-6W-Jh3"/>
                             <constraint firstItem="4Lc-1Q-sFB" firstAttribute="leading" secondItem="2hj-g9-JUK" secondAttribute="leading" constant="123" id="OPO-Kr-1rP"/>
                             <constraint firstItem="EOj-7q-qwz" firstAttribute="centerX" secondItem="4Lc-1Q-sFB" secondAttribute="centerX" id="sg9-ef-YsD"/>
@@ -586,6 +588,7 @@
         <image name="payment" width="750" height="1624"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="profile-2" width="750" height="1624"/>
+        <image name="profileScreen" width="750" height="908"/>
         <image name="rsvp2" width="738" height="1400"/>
     </resources>
     <inferredMetricsTieBreakers>

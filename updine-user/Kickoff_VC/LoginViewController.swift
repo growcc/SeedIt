@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.image = UIImage(named: ("login"))
+        imageView.image = UIImage(named: ("intro"))
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {

@@ -29,7 +29,7 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
     var recognitionTask: SFSpeechRecognitionTask?
     let audioEngine = AVAudioEngine()
     
-    let markerTitle: String = "Get Directions"
+    let markerTitle: String = "Winc - Get Directions"
     
     
      func centerViewOnUserLocation() {
@@ -80,12 +80,12 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
     func addAnnotations(){
         let pinOne = MKPointAnnotation()
         pinOne.title = markerTitle
-        pinOne.coordinate = CLLocationCoordinate2D(latitude: 37.7989, longitude: 122.4662)
+        pinOne.coordinate = CLLocationCoordinate2D(latitude: 37.7989, longitude: -122.4662)
         
         
         let pinTwo = MKPointAnnotation()
         pinTwo.title = markerTitle
-        pinTwo.coordinate = CLLocationCoordinate2D(latitude: 51.5734, longitude: 0.0724)
+        pinTwo.coordinate = CLLocationCoordinate2D(latitude: 51.5033, longitude: -0.1195)
         
         let timesSqaureAnnotation = MKPointAnnotation()
                timesSqaureAnnotation.title = markerTitle
@@ -209,6 +209,7 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
             checkLocationServices()
             mapView.delegate = self
             flyKitSetup()
+            createBottomView()
 
            let name = NSNotification.Name(rawValue: "BottomViewMoved")
            NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: receiveNotification(_:))
@@ -415,7 +416,7 @@ extension HomeViewController: MKMapViewDelegate {
     //segue to details vc
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         showRoute() //for destination gps
-        createBottomView()
+//        createBottomView()
 //         let annView = view.annotation
 //
 //       let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
