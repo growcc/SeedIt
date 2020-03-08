@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
     let regionInMeters: Double = 30000
     var currentCoordinate: CLLocationCoordinate2D?
     
+    var userInputLocation = FlyoverAwesomePlace.newYork
     let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "en-us"))
     var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     var recognitionTask: SFSpeechRecognitionTask?
@@ -115,8 +116,8 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
         
         
         
-        mapView.addAnnotation(pinOne)
-        mapView.addAnnotation(pinTwo)
+//        mapView.addAnnotation(pinOne)
+//        mapView.addAnnotation(pinTwo)
         
 //        mapView.selectAnnotation(pinOne, animated: true)
 //        mapView.selectAnnotation(pinTwo, animated: true)
@@ -155,16 +156,12 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
        }
     
     func flyKitSetup() {
-//        self.mapView.mapType = .hybridFlyover
-        
-//        self.mapView.mapType = .hybridFlyover
         self.mapView.showsBuildings = true
-//        self.mapView.isZoomEnabled = true
         self.mapView.isScrollEnabled = true
         
-        let camera = FlyoverCamera(mapView: self.mapView, configuration: FlyoverCamera.Configuration(duration: 5.0, altitude: 20000, pitch: 45.0, headingStep: 40.0))
-        camera.start(flyover: FlyoverAwesomePlace.newYork)
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(20), execute:{
+        let camera = FlyoverCamera(mapView: self.mapView, configuration: FlyoverCamera.Configuration(duration: 4.0, altitude: 30000, pitch: 45.0, headingStep: 40.0))
+        camera.start(flyover: self.userInputLocation)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute:{
             camera.stop()
         })
     }
@@ -243,10 +240,103 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
                    }
     
        }
-    //sw
+
+    //    SPEECH RECORDING STUFF
+    func startRecording() {
+        if recognitionTask != nil {
+            recognitionTask?.cancel()
+            recognitionTask = nil
+        }
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        } catch {
+            print("Dailed to setup audio session")
+        }
+        
+        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+        let inputNode = audioEngine.inputNode
+        guard let recognitionRequest = recognitionRequest else {
+            fatalError("Could not create request instance")
+        }
+        
+        recognitionRequest.shouldReportPartialResults = true
+        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) {
+            result, error in
+            var isLast = false
+            if result != nil {
+                isLast = (result?.isFinal)!
+            }
+            
+            if error != nil || isLast {
+                self.audioEngine.stop()
+                inputNode.removeTap(onBus: 0)
+                
+                self.recognitionRequest = nil
+                self.recognitionTask = nil
+                
+                self.locationButton.isEnabled = true
+                let bestTranscription = result?.bestTranscription.formattedString
+                var inDictionary = self.locationDictionary.contains {$0.key == bestTranscription}
+                
+                if inDictionary {
+                    self.userInputLocation = self.locationDictionary[bestTranscription!]!
+                } else{
+                   
+                    self.userInputLocation = FlyoverAwesomePlace.newYorkStatueOfLiberty
+                }
+                self.flyKitSetup()
+            }
+        }
+        
+        let format = inputNode.outputFormat(forBus: 0)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: format){
+            buffer, _ in
+            self.recognitionRequest?.append(buffer)
+        }
+        
+        audioEngine.prepare()
+        
+        do{
+            try audioEngine.start()
+        } catch {
+            print("We were not able to start the engine")
+        }
+        
+    }
+    
     
         
     @IBOutlet weak var locationButton: UIButton!
+    
+    
+    @IBAction func locationButtonClicked(_ sender: Any) {
+        if audioEngine.isRunning {
+               audioEngine.stop()
+               recognitionRequest?.endAudio()
+               locationButton.isEnabled = false
+               locationButton.setTitle("Record", for: .normal)
+           } else {
+               startRecording()
+               locationButton.setTitle("Stop", for: .normal)
+           }
+                   
+    }
+    
+    let locationDictionary = [
+        "Statue of Liberty": FlyoverAwesomePlace.newYorkStatueOfLiberty,
+        "Midtown": FlyoverAwesomePlace.centralParkNY,
+        "California": FlyoverAwesomePlace.sanFranciscoGoldenGateBridge,
+        "Miami": FlyoverAwesomePlace.miamiBeach,
+        "Rome": FlyoverAwesomePlace.romeColosseum,
+        "Big Ben": FlyoverAwesomePlace.londonBigBen,
+        "London": FlyoverAwesomePlace.londonEye,
+        "Paris": FlyoverAwesomePlace.parisEiffelTower,
+        "New York": FlyoverAwesomePlace.newYork,
+        "Las Vegas": FlyoverAwesomePlace.luxorResortLasVegas
+        
+    ]
     
 
 }
