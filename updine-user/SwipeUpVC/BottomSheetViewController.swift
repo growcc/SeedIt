@@ -12,19 +12,12 @@ import EventKit
 class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
     
 
-    
-
-    @IBOutlet weak var navBarView: UIView!
-    
-    
-    @IBOutlet weak var video: UIWebView!
-    
-    
 
     
-        let closeThresholdHeight: CGFloat = 200
+    
+        let closeThresholdHeight: CGFloat = 210
         let openThreshold: CGFloat = UIScreen.main.bounds.height - 200
-        let closeThreshold = UIScreen.main.bounds.height - 200 // same value as closeThresholdHeight
+        let closeThreshold = UIScreen.main.bounds.height - 210 // same value as closeThresholdHeight
         var panGestureRecognizer: UIPanGestureRecognizer?
         var animator: UIViewPropertyAnimator?
 
@@ -34,21 +27,24 @@ class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
             gotPanned(0)
             super.viewDidLoad()
             
+            iCarouselView.type = .cylinder
+            iCarouselView.contentMode = .scaleAspectFill
+            iCarouselView.isPagingEnabled = true
 
             let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(respondToPanGesture))
             view.addGestureRecognizer(gestureRecognizer)
             gestureRecognizer.delegate = self
             panGestureRecognizer = gestureRecognizer
             
-            getVideo(videoCode: "vsJO1Ko4gb4")
+//            getVideo(videoCode: "vsJO1Ko4gb4")
         }
 
     
-        //play video
-        func getVideo(videoCode: String){
-            let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
-            video.loadRequest(URLRequest(url: url!))
-        }
+//        //play video
+//        func getVideo(videoCode: String){
+//            let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+//            video.loadRequest(URLRequest(url: url!))
+//        }
     
         func gotPanned(_ percentage: Int) {
             if animator == nil {
@@ -147,7 +143,39 @@ class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
+    @IBOutlet weak var iCarouselView: iCarousel!
     
+    var companies = [
+        UIImage(named: "wincCard"),
+        UIImage(named: "smileloveCard"),
+        UIImage(named: "tripActionsCard"),
+        UIImage(named: "latchCard")
+    ]
+    
+
+    
+    
+    
+}
+extension BottomSheetViewController: iCarouselDelegate, iCarouselDataSource {
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return companies.count
+    }
+
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        var imageView: UIImageView!
+        
+        if view == nil{
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 327, height: 297))
+            imageView.contentMode = .scaleAspectFit
+        } else {
+            imageView = view as? UIImageView
+        }
+        imageView.image = companies[index]
+        return imageView
+    }
+
+
 }
 
     
