@@ -11,9 +11,8 @@
 ## [Video Walkthrough](https://drive.google.com/file/d/186iKkMPAmOIDWOxen3DyC_GoTLCzSnVN/view)
 <div style="display: inline-block;">
   <div style="display: inline-block;">
-  <img src="Profile.png"  width="200">
+  <img src="profile.png"  width="200">
   <img src="wincCard@3x.png"  width="200">
-  <img src="Feed.png"  width="200">
 <!--   <img src="t5.png"  width="200"> -->
   <!-- <img src="assets/"  width="295"> -->
   <!-- <img src="assets/"  width="400"> -->
