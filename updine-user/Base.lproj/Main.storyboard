@@ -23,10 +23,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXh-bG-X0M">
-                                <rect key="frame" x="197" y="54" width="128" height="34"/>
+                                <rect key="frame" x="50" y="54" width="128" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Say A Location">
-                                    <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.20798527759999999" green="0.23915282600000001" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="locationButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cg-aa-XQ7"/>
@@ -39,9 +39,10 @@
                             <constraint firstItem="BHa-6U-joA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0qH-wd-amC"/>
                             <constraint firstItem="G8B-3k-SH6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2i5-dm-JF1"/>
                             <constraint firstAttribute="bottom" secondItem="G8B-3k-SH6" secondAttribute="bottom" id="9gF-OO-UK2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qXh-bG-X0M" secondAttribute="trailing" constant="50" id="Fbs-vM-gfW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qXh-bG-X0M" secondAttribute="trailing" constant="197" id="Ju1-Bg-QVd"/>
                             <constraint firstAttribute="trailing" secondItem="G8B-3k-SH6" secondAttribute="trailing" id="PNI-UH-02i"/>
                             <constraint firstAttribute="trailing" secondItem="BHa-6U-joA" secondAttribute="trailing" id="SNG-8M-oQH"/>
+                            <constraint firstItem="qXh-bG-X0M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Yqh-KW-kSC"/>
                             <constraint firstItem="G8B-3k-SH6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i7A-kg-PMy"/>
                             <constraint firstItem="BHa-6U-joA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rhs-KY-WNC"/>
                             <constraint firstItem="BHa-6U-joA" firstAttribute="top" secondItem="G8B-3k-SH6" secondAttribute="top" id="rvC-bY-FmR"/>

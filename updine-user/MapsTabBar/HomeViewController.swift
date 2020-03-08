@@ -432,7 +432,7 @@ extension HomeViewController: MKMapViewDelegate {
     //color overlay over the geofences
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
          let renderer = MKPolylineRenderer(overlay: overlay)
-               renderer.strokeColor = UIColor.green
+               renderer.strokeColor = UIColor.blue
                renderer.lineWidth = 4.0
                return renderer
     }
