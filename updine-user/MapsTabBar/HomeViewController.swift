@@ -80,12 +80,12 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
     func addAnnotations(){
         let pinOne = MKPointAnnotation()
         pinOne.title = markerTitle
-        pinOne.coordinate = CLLocationCoordinate2D(latitude: 40.692040, longitude: -73.987590)
+        pinOne.coordinate = CLLocationCoordinate2D(latitude: 37.7989, longitude: 122.4662)
         
         
         let pinTwo = MKPointAnnotation()
         pinTwo.title = markerTitle
-        pinTwo.coordinate = CLLocationCoordinate2D(latitude: 40.7484, longitude: -73.9857)
+        pinTwo.coordinate = CLLocationCoordinate2D(latitude: 51.5734, longitude: 0.0724)
         
         let timesSqaureAnnotation = MKPointAnnotation()
                timesSqaureAnnotation.title = markerTitle
@@ -116,8 +116,8 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
         
         
         
-//        mapView.addAnnotation(pinOne)
-//        mapView.addAnnotation(pinTwo)
+        mapView.addAnnotation(pinOne)
+        mapView.addAnnotation(pinTwo)
         
 //        mapView.selectAnnotation(pinOne, animated: true)
 //        mapView.selectAnnotation(pinTwo, animated: true)
@@ -206,7 +206,6 @@ class HomeViewController: UIViewController, SFSpeechRecognizerDelegate {
     
        override func viewDidLoad() {
            super.viewDidLoad()
-           createBottomView()
             checkLocationServices()
             mapView.delegate = self
             flyKitSetup()
@@ -416,6 +415,7 @@ extension HomeViewController: MKMapViewDelegate {
     //segue to details vc
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         showRoute() //for destination gps
+        createBottomView()
 //         let annView = view.annotation
 //
 //       let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
