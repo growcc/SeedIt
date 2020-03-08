@@ -7,7 +7,8 @@ target 'updine-user' do
 
   # Pods for updine-user
 	pod 'AlamofireImage'
-	pod 'Alamofire'
+	pod 'Stripe', '18.2.0'
+  	pod 'Alamofire', '4.9.1'
 	pod 'FlyoverKit', '~> 1.2.0'
 
 end

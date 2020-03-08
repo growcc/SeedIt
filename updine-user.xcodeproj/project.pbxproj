@@ -27,6 +27,7 @@
 		7CD155E923DCB597002775A9 /* OneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD155E823DCB597002775A9 /* OneCollectionViewCell.swift */; };
 		7CD155EC23DD8B07002775A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD155EB23DD8B07002775A9 /* LoginViewController.swift */; };
 		7CE08F8823DDE10000782338 /* FoodSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE08F8723DDE10000782338 /* FoodSpot.swift */; };
+		7CF9E33E24154BCD005AFCD3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF9E33D24154BCD005AFCD3 /* Constants.swift */; };
 		F72FD44D05FBC1193B97543D /* Pods_updine_user.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6148F991BB3F5C1D8BF285B9 /* Pods_updine_user.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		7CD155E823DCB597002775A9 /* OneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CD155EB23DD8B07002775A9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7CE08F8723DDE10000782338 /* FoodSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSpot.swift; sourceTree = "<group>"; };
+		7CF9E33D24154BCD005AFCD3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F8247B17294AA4B2DDD1297 /* Pods-updine-user.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-updine-user.debug.xcconfig"; path = "Target Support Files/Pods-updine-user/Pods-updine-user.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				1B38C0932414803500D95B8B /* FeedViewController.swift */,
 				1B38C09524151CD000D95B8B /* InfoViewController.swift */,
 				1B38C0972415231600D95B8B /* PayViewController.swift */,
+				7CF9E33D24154BCD005AFCD3 /* Constants.swift */,
 			);
 			path = invest;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				1B38C0922414781600D95B8B /* ProfileViewController.swift in Sources */,
 				7CD155E923DCB597002775A9 /* OneCollectionViewCell.swift in Sources */,
 				7CD155EC23DD8B07002775A9 /* LoginViewController.swift in Sources */,
+				7CF9E33E24154BCD005AFCD3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
