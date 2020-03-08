@@ -13,6 +13,8 @@
   <div style="display: inline-block;">
   <img src="profile.png"  width="200">
   <img src="wincCard@3x.png"  width="200">
+   <img src="intro.png"  width="200">
+
 <!--   <img src="t5.png"  width="200"> -->
   <!-- <img src="assets/"  width="295"> -->
   <!-- <img src="assets/"  width="400"> -->
