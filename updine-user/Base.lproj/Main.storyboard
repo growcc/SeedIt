@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="updine_user" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="mappin.and.ellipse" catalog="system" id="LCh-0s-2Uf">
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="LCh-0s-2Uf">
                         <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="132.26600985221674"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--View Controller-->
         <scene sceneID="zff-f1-3Xp">
             <objects>
-                <viewController id="VNt-kv-JtS" customClass="FeedViewController" customModule="updine_user" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VNt-kv-JtS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6E-Y4-21b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,9 +88,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndS-vd-m8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="1025.615763546798"/>
+            <point key="canvasLocation" x="4009" y="1520"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="WQH-9q-OKj">
             <objects>
                 <viewController id="ikl-Be-G8a" customClass="ProfileViewController" customModule="updine_user" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,7 +116,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JVF-LA-HrF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person.circle" catalog="system" id="9EU-cH-4d3">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="9EU-cH-4d3">
                         <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -368,17 +368,84 @@
                         <color key="backgroundColor" red="0.95686274509803915" green="0.17254901960784313" blue="0.32549019607843138" alpha="0.0" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="VNt-kv-JtS" kind="relationship" relationship="viewControllers" id="ovy-Ml-zPz"/>
-                        <segue destination="ikl-Be-G8a" kind="relationship" relationship="viewControllers" id="hXL-fd-uAo"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XID-bf-iXY"/>
+                        <segue destination="1C7-b2-6cg" kind="relationship" relationship="viewControllers" id="x81-j1-NfW"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Kr4-EA-L1N"/>
+                        <segue destination="ikl-Be-G8a" kind="relationship" relationship="viewControllers" id="Xyc-A6-qDH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMr-H3-haz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
         </scene>
+        <!--Invest-->
+        <scene sceneID="gCk-uj-oO1">
+            <objects>
+                <viewController id="1C7-b2-6cg" customClass="FeedViewController" customModule="updine_user" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w7i-ZI-BtW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knG-RG-WRz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ur8-Fm-hIh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Feed" translatesAutoresizingMaskIntoConstraints="NO" id="U9X-nD-kFZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugn-rQ-z6D">
+                                                <rect key="frame" x="254" y="285" width="86" height="96"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6b-Wd-oOD">
+                                                <rect key="frame" x="8" y="64" width="86" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDp-Q0-pgr">
+                                                <rect key="frame" x="219" y="404" width="121" height="69"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqX-tC-7YX">
+                                                <rect key="frame" x="8" y="30" width="93" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1400" id="jbF-cd-ILA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ur8-Fm-hIh" secondAttribute="trailing" id="7Ys-AZ-Dsi"/>
+                                    <constraint firstItem="Ur8-Fm-hIh" firstAttribute="top" secondItem="knG-RG-WRz" secondAttribute="top" id="J7d-p5-gnY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ur8-Fm-hIh" secondAttribute="bottom" id="Xht-c3-Knt"/>
+                                    <constraint firstItem="Ur8-Fm-hIh" firstAttribute="leading" secondItem="knG-RG-WRz" secondAttribute="leading" id="qec-0i-GcP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="knG-RG-WRz" secondAttribute="bottom" id="Chd-Hk-rwu"/>
+                            <constraint firstItem="Ur8-Fm-hIh" firstAttribute="width" secondItem="w7i-ZI-BtW" secondAttribute="width" id="FQ6-7P-k3R"/>
+                            <constraint firstItem="knG-RG-WRz" firstAttribute="leading" secondItem="FV4-Nc-YgO" secondAttribute="leading" id="GvH-Se-c9x"/>
+                            <constraint firstItem="knG-RG-WRz" firstAttribute="top" secondItem="w7i-ZI-BtW" secondAttribute="top" id="if5-7r-jjb"/>
+                            <constraint firstItem="knG-RG-WRz" firstAttribute="trailing" secondItem="FV4-Nc-YgO" secondAttribute="trailing" id="mUR-BK-dNX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FV4-Nc-YgO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Invest" image="dollarsign.circle" catalog="system" selectedImage="dollarsign.circle" id="PfW-gO-KeE"/>
+                    <size key="freeformSize" width="375" height="1400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4v-YB-2om" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901.60000000000002" y="1215.5172413793105"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Feed" width="1125" height="4374"/>
         <image name="dineDetails" width="122.33333587646484" height="466.66665649414062"/>
         <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
         <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
