@@ -26,7 +26,7 @@
 - [x] (Design) Zeplin components
 - [x] (Native) Create boilerplate w rotating map
 - [x] (Backend) Connect double segmented market to non-relational database
-- [ ] (Native) Implement Apple Calnder and Apple Map transitions
+- [x] (Native) Implement Apple Calnder and Apple Map transitions
 
 ## Roadblocks Overcame
 - **Pull Requests** with differnt pod folders and stroyboard edits in different branches
