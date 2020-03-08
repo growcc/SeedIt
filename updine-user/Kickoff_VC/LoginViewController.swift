@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
 //            let vc = segue.destination as! HomeViewController
             
             let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-            let destinationVC = tabCtrl.viewControllers![0] as! HomeViewController
+            let destinationVC = tabCtrl.viewControllers![0] as! FeedViewController
         }
     }
 
