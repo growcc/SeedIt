@@ -3,7 +3,7 @@
 **Overview**
 - This was my 15th Hackathon. Amongst my previous hacks, I am most fond of the solution this app presents.
 - I worked on integrating a payment server with Stripe API with callbacks to our our iOS device.
-- [My Linkedin Post Which Blew Up](https://www.linkedin.com/feed/update/urn:li:activity:6642929462742777856/)
+- [My Linkedin Post Which Blew Up (80k+ Views)](https://www.linkedin.com/feed/update/urn:li:activity:6642929462742777856/)
 
 **About:** A platform for startups and new brands to market and share their business for investors to view and help grow. Allows for investors to view startups based on location and industry in a seamless way. Also allows for transactions to take place directly in the app in real time between both parties. 
 
