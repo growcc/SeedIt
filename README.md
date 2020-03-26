@@ -1,5 +1,22 @@
 # SeedIt
 
+**My Linkedin Post** I've been asked a lot what I do. Here's my pitch as if you were the judge:
+
+(Elevator pitch) Today startups with exponential looking growth curves get funded hundred-million-dollar checks by venture capitalists and angel investors i.e. Softbank and WeWork
+
+Most of our economy, tho, is made of businesses with more humble growth trajectories if any. Most people today have some money saved - if they even do - but hardly enough for a house down payment ~150-200k in NYC. 
+
+Seedit is an app for small businesses to get crowdfunded by small investors for equity
+
+(Touch/feel demo) Here's our app with wow factor: working payment process. 
+
+(Beyond the bar) NodeJs is a runtime environment making mobile/web apps browser-agnostic. Our working payment server is hosted on Heroku and our ios app uses Google Cloud. Using Kubernetes allows us to achieve cloud-agnostic. 
+
+What gets me excited about these hackathons is not code, nor clout - which is great - but ideation. I love coming up with ideas that solve real-world problems and I feel each hackathon is a day closer to making that feeling actually true.
+---
+
+To my team : you bring the best out of me, you are a beast at what you do and I look forward to growing further together 
+
 **About:** A platform for startups and new brands to market and share their business for investors to view and help grow. Allows for investors to view startups based on location and industry in a seamless way. Also allows for transactions to take place directly in the app in real time between both parties. 
 
 **Built With:** Swift, Xcode, Zeplin, Google Cloud, Firebase, Speech Recognition, Stripe API 
