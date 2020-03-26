@@ -1,7 +1,7 @@
 # SeedIt
 
 **Overview**
-- This was my 15th Hackathon. This is my most accomplished hackathon project. 
+- This was my 15th Hackathon. Amongst my previous hacks, I am most fond of the solution this app presents.
 - I worked on integrating a payment server with Stripe API with callbacks to our our iOS device.
 - [My Linkedin Post Which Blew Up](https://www.linkedin.com/feed/update/urn:li:activity:6642929462742777856/)
 
